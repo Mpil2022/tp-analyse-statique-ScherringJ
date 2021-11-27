@@ -37,7 +37,7 @@ jobs:
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
       - name: Build and analyze
-        run: mvn -f tp-analyse-statique-ScherringJ/spring-petclinic/pom.xml -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Pcoverage
+        run: mvn -f ./tp-analyse-statique-ScherringJ/spring-petclinic/pom.xml -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Pcoverage
         env:
           # Needed to get some information about the pull request, if any
           GITHUB_TOKEN: ${{ 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 }}
