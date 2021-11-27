@@ -40,6 +40,6 @@ jobs:
         run: mvn -f spring-petclinic/pom.xml -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Pcoverage
         env:
           # Needed to get some information about the pull request, if any
-          GITHUB_TOKEN: ${{ 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 }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # SonarCloud access token should be generated from https://sonarcloud.io/account/security/
-          SONAR_TOKEN: ${{ 7bebe11fe69a31704d4435078b9f6a50d07ecb7d }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN  }}
